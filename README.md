@@ -143,7 +143,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
 
 ##### 余额查询
-> 测试环境： http://apidemo.jumingpay.com.cn/api/payOrder/query
+> 测试环境：  http://apidemo.jumingpay.com.cn/api/balance/query
 
 ###### 支持格式
 > JSON
