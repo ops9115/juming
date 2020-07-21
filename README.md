@@ -3,6 +3,8 @@
 ##### 支付下单接口地址
 > 测试环境:    http://apidemo.jumingpay.com.cn/api/payOrder/create
 
+> 正式环境:    http://api.jumingpay.com.cn/api/payOrder/create
+
 ###### 支持格式
 > JSON
 
@@ -88,6 +90,8 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ##### 支付查询接口地址
 > 测试环境：     http://apidemo.jumingpay.com.cn/api/payOrder/query
 
+> 正式环境：     http://api.jumingpay.com.cn/api/payOrder/query
+
 ###### 支持格式
 > JSON
 
@@ -145,6 +149,8 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ##### 余额查询
 > 测试环境：  http://apidemo.jumingpay.com.cn/api/balance/query
 
+> 正式环境：  http://api.jumingpay.com.cn/api/balance/query
+
 ###### 支持格式
 > JSON
 
@@ -190,6 +196,8 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ```
 ##### 提现请求接口
 > 测试环境:    http://apidemo.jumingpay.com.cn/api/remitOrder/create
+
+> 正式环境:    http://api.jumingpay.com.cn/api/remitOrder/create
 
 ###### 支持格式
 > JSON
@@ -246,6 +254,8 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 
 #### 提现订单查询接口
 > 测试环境:   http://apidemo.jumingpay.com.cn/api/remitOrder/query
+
+> 正式环境:   http://api.jumingpay.com.cn/api/remitOrder/query
 
 ###### 支持格式
 > JSON
