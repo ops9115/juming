@@ -146,6 +146,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 >|sign    |true    |签名   |商户进行验签|
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
 
+>回调验证成功后返回 success 字符串
 ##### 余额查询
 > 测试环境：  http://apidemo.jumingpay.com.cn/api/balance/query
 
