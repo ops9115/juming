@@ -141,7 +141,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|merchantOrderNo    |ture    |商户订单号|                        |
->|message    |true    |响应信息描述	   |例：操作成功|
+>|message    |false    |响应信息描述	   |例：操作成功|
 >|amount    |true    |金额   |单位：元|
 >|sign    |true    |签名   |商户进行验签|
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
