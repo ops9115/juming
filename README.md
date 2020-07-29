@@ -365,4 +365,5 @@ WECHAT_QR_CODE：微信二维码
 
 WECHAT_WAP：微信wap
 
+POINT_CARD：点卡
 ````
