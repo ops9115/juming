@@ -40,17 +40,17 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ```
 
 ###### 请求参数
-> |参数|必选| 参数名称|说明|
-> |:-----  | :-------| :-----| :-----                               |
-> |merchantId    |ture    |商户id|平台给定商户唯一标识                          |
-> |version    |true    |版本号	   |版本号，固定1.0.0|
-> |merchantOrderNo    |ture    |商户订单号|商户订单id                        |
-> |amount    |true    |金额   |单位：元|
-> |model    |ture    |模式|详见末尾模式说明                         |
-> |bankCode |false | 银行编码| --当模式是网银支付(E_BANK)时 必填|
-> |memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线时必填。|
-> |notifyUrl    |true    |通知地址   |订单成功后的回调通知地址|
-> |sign    |true    |签名   |详见签名说明|
+ |参数|必选| 参数名称|说明|
+|:-----:  | :-------: | :-----:| -----                               |
+|merchantId    |ture    |商户id|平台给定商户唯一标识                          |
+|version    |true    |版本号	   |版本号，固定1.0.0|
+|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
+|amount    |true    |金额   |单位：元|
+|model    |ture    |模式|详见末尾模式说明                         |
+|bankCode |false | 银行编码| --当模式是网银支付(E_BANK)时 必填|
+|memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线时必填。|
+|notifyUrl    |true    |通知地址   |订单成功后的回调通知地址|
+|sign    |true    |签名   |详见签名说明|
 
 ###### 请求参数示例
 ``` javascript
