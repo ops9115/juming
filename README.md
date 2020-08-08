@@ -41,7 +41,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 
 ###### 请求参数
  |参数|必选| 参数名称|说明|
-|:-----:  | :-------: | :-----:| -----                               |
+|-----  | ------- | -----| -----                               |
 |merchantId    |ture    |商户id|平台给定商户唯一标识                          |
 |version    |true    |版本号	   |版本号，固定1.0.0|
 |merchantOrderNo    |ture    |商户订单号|商户订单id                        |
