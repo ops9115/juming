@@ -40,17 +40,17 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ```
 
 ###### 请求参数
- |参数|必选| 参数名称|说明|
-|-----  | ------- | -----| -----                               |
-|merchantId    |ture    |商户id|平台给定商户唯一标识                          |
-|version    |true    |版本号	   |版本号，固定1.0.0|
-|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
-|amount    |true    |金额   |单位：元|
-|model    |ture    |模式|详见末尾模式说明                         |
-|bankCode |false | 银行编码| --当模式是网银支付(E_BANK)时 必填|
-|memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线时必填。|
-|notifyUrl    |true    |通知地址   |订单成功后的回调通知地址|
-|sign    |true    |签名   |详见签名说明|
+>  |参数|必选| 参数名称|说明|
+> |:-----  |:-------|:-----|:-----                               |
+> |merchantId    |ture    |商户id|平台给定商户唯一标识                          |
+> |version    |true    |版本号	   |版本号，固定1.0.0|
+> |merchantOrderNo    |ture    |商户订单号|商户订单id                        |
+> |amount    |true    |金额   |单位：元|
+> |model    |ture    |模式|详见末尾模式说明                         |
+> |bankCode |false | 银行编码| --当模式是网银支付(E_BANK)时 必填|
+> |memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线时必填。|
+> |notifyUrl    |true    |通知地址   |订单成功后的回调通知地址|
+> |sign    |true    |签名   |详见签名说明|
 
 ###### 请求参数示例
 ``` javascript
@@ -69,10 +69,9 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|code    |ture    |响应状态码|0为请求成功                        |
->|message    |true    |响应信息描述	   |例：操作成功|
+>|msg    |true    |响应信息描述	   |例：操作成功|
 >|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
 >|amount    |true    |金额   |单位：元|
->|merchantId    |true    |商户id   |平台给定商户唯一标识 |
 >|url    |true    |支付地址 |跳转支付页面的地址 |
 >|sign    |true    |签名   |商户进行验签|
 
@@ -112,6 +111,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 {
     "merchantId":"10001",
     "merchantOrderNo":"20190923162701",
+    "submitTime":"201909230656",
     "sign":"M7i3zi7sHIni4bUchw7DsPfMltaCzUxP9gPeeSTfL0k7uMLL7lsAUz20wxP75+2eMCQ69V7qvk5Wh+O0hGqO42yiN0VbK/A8ucpQbF/Pw/llUi4tCP1bqQYQSa+2rdQuoNJR1rxR8viQw0RulO3wdhgqCBajsBXFg2QMxah9nRs=","submitTime":"20200709125837",
     "version":"1.0.0"
 }
@@ -121,10 +121,9 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|code    |ture    |响应状态码|0为请求成功                        |
->|message    |true    |响应信息描述	   |例：操作成功|
+>|msg    |true    |响应信息描述	   |例：操作成功|
 >|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
 >|amount    |true    |金额   |单位：元|
->|merchantId    |true    |商户id   |平台给定商户唯一标识 |
 >|sign    |true    |签名   |商户进行验签|
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
 ###### 响应参数示例
@@ -142,11 +141,21 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|merchantOrderNo    |ture    |商户订单号|                        |
->|message    |false    |响应信息描述	   |例：操作成功|
+>|merchantId    |true    |平台给定商户唯一标识	   |例：1001|
 >|amount    |true    |金额   |单位：元|
 >|sign    |true    |签名   |商户进行验签|
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
 
+#### 异步回调参数示列
+```
+{
+    "amount":"1",
+    "merchantId":"1001",
+    "merchantOrderNo":"2019092120200808",
+    "sign":"aaGJROTtAfLKIJwB/ox/W91NjWiMOTFA3OJHioz7HfbTt+ZRunv1qCxG+oMgoMzOy5BJmEvWzZeRSj4x11EswJVWMX1AhB7QQmCtxax5J4BjggyxnqeukVvm9CwL8+uQY3ouIi0aISRSVUjcgbIWt71KGQf47xs7vt9fy7TIPK0=",
+    "status":"1"
+   }
+```
 >回调验证成功后返回 success 字符串
 ##### 余额查询
 > 测试环境：  http://apidemo.jumingpay.com.cn/api/balance/query
@@ -222,7 +231,8 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ######  请求参数示例
 ``` javascript
 {
-   "amount":"100","bankCode":"ICBC",
+   "amount":"100",
+   "bankCode":"ICBC",
    "bankcardAccountName":"电风扇",
    "bankcardAccountNo":"123456789123456789",
    "merchantId":"10001",
@@ -236,11 +246,10 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|code    |ture    |响应状态码|0为请求成功                        |
->|message    |true    |响应信息描述	   |例：操作成功|
+>|msg    |true    |响应信息描述	   |例：操作成功|
 >|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
 >|amount    |true    |金额   |单位：元|
->|merchantId    |true    |商户id   |平台给定商户唯一标识 |
->|sign    |true    |签名   |商户进行验签|
+>|sign    |true    |签名   |商户进行平台公钥验签|
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
 ###### 响应参数示例
 ``` javascript
@@ -288,11 +297,10 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|code    |ture    |响应状态码|0为请求成功                        |
->|message    |true    |响应信息描述	   |例：操作成功|
+>|msg    |true    |响应信息描述	   |例：操作成功|
 >|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
 >|amount    |true    |金额   |单位：元|
->|merchantId    |true    |商户id   |平台给定商户唯一标识 |
->|sign    |true    |签名   |商户进行验签|
+>|sign    |true    |签名   |商户进行平台公钥验签|
 >|status    |true    |订单支付状态   |订单状态：0：处理中，1：成功，2：失败|
 ###### 响应参数示例
 ``` javascript
@@ -315,6 +323,17 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 >|merchantId    |true    |商户id   |平台给定商户唯一标识 |
 >|sign    |true    |签名   |商户进行验签|
 >|bankcardAccountNo    |true    |银行卡号   ||
+
+##### 反查参数示例
+```json
+{
+    "amount":"1",
+    "bankcardAccountNo":"6212260302022047880",
+    "merchantId":"1001",
+    "merchantOrderNo":"2019092120200807",
+    "sign":"F+lWyTBkuCDtgKJmoBLHYvoIBYMCHvp7kCK7a9sg8ld8oi+M+dS5QnMhQeYohBribWiHpsu9BwI8QPhxj0b3K6Z8oWhRGDqwRdk3qk8rk2dpfzp+8/h/PB4yCchW1sd8JZUuvFdoBz9ASr3S7MHd0qXVvCQV5CUtlCdtpgsA3i0="
+}
+```
 ###### 响应参数说明参数说明
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
