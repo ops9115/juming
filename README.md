@@ -40,7 +40,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ```
 
 ###### 请求参数
->  |参数|必选| 参数名称|说明|
+> |参数|必选| 参数名称|说明|
 > |:-----  |:-------|:-----|:-----                               |
 > |merchantId    |ture    |商户id|平台给定商户唯一标识                          |
 > |version    |true    |版本号	   |版本号，固定1.0.0|
@@ -51,6 +51,13 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线时必填。|
 > |notifyUrl    |true    |通知地址   |订单成功后的回调通知地址|
 > |sign    |true    |签名   |详见签名说明|
+
+#### 商户会员号说明
+
+<br>1： memberNo如果传入随机数，订单号，每次订单都不一样，需要每次都绑定银行卡，用户体验不好，会影响成功率。</br>
+<br>2： memberNo如果写死一个值，会员A，B，C，D。。。只会绑定一次银行卡，但彼此都能看见自己的银行卡，会影响用户体验。。会害怕。。</br>
+<br>3： memberNo需要传会员ID或代表会员ID唯一的信息（如：加密后的会员ID，混淆的会员ID)，只会绑定一次银行卡，而且各自订单只能看见自己的银行卡，体验好，成功率高。</br>
+
 
 ###### 请求参数示例
 ``` javascript
