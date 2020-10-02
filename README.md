@@ -48,7 +48,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 > |amount    |true    |金额   |单位：元|
 > |model    |ture    |模式|详见末尾模式说明                         |
 > |bankCode |false | 银行编码| --当模式是网银支付(E_BANK)时 必填|
-> |memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线时必填。|
+> |memberNo    |false    |商户会员号   |注意：会员号“.”是为商户自身预留的特殊会员号，请勿使用于普通会员，如刚好出现会员号为“.”的，请进行替换。模式为银联在线、银联快捷时必填。|
 > |notifyUrl    |true    |通知地址   |订单成功后的回调通知地址|
 > |sign    |true    |签名   |详见签名说明|
 
@@ -402,4 +402,5 @@ QQ_WAP：QQ钱包WAP
 
 QQ_QR_CODE：QQ扫码
 
+UPQP：银联快捷
 ````
