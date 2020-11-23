@@ -403,4 +403,7 @@ QQ_WAP：QQ钱包WAP
 QQ_QR_CODE：QQ扫码
 
 UPQP：银联快捷
+
+QUICK_PASS: 云闪付
+
 ````
