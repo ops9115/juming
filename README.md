@@ -404,6 +404,6 @@ QQ_QR_CODE：QQ扫码
 
 UPQP：银联快捷
 
-QUICK_PASS: 云闪付
+YSF_QR_CODE: 云闪付扫码
 
 ````
