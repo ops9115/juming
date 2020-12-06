@@ -146,7 +146,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 	"status":"0"
 }
 ```
-##### 异步回调参数说明
+##### 异步回调参数说明 （支付异步回调，代付异步回调相同）
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|merchantOrderNo    |ture    |商户订单号|                        |
