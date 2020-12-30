@@ -324,7 +324,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
 ```
 #### 代付反查
 
-###### 反查参数说明
+###### 反查参数说明 （需要商户提供对外反查api给我方，我方按照下列参数格式反查订单）
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
@@ -343,7 +343,7 @@ publicKey : MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCRwmzgyPl3U7qU6YRRGEvGmW6Mlcb3
     "sign":"F+lWyTBkuCDtgKJmoBLHYvoIBYMCHvp7kCK7a9sg8ld8oi+M+dS5QnMhQeYohBribWiHpsu9BwI8QPhxj0b3K6Z8oWhRGDqwRdk3qk8rk2dpfzp+8/h/PB4yCchW1sd8JZUuvFdoBz9ASr3S7MHd0qXVvCQV5CUtlCdtpgsA3i0="
 }
 ```
-###### 响应参数说明参数说明
+###### 响应参数说明参数说明 （由商户按这个参数形式制定响应，由code字段跟message字段描述订单反查是否成功）
 > |参数|必选|参数名称|说明|
 >|:-----  |:-------|:-----|-----                               |
 >|merchantOrderNo    |ture    |商户订单号|商户订单id                        |
