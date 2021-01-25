@@ -406,4 +406,5 @@ UPQP：银联快捷
 
 YSF_QR_CODE: 云闪付扫码
 
+UPI: upi支付
 ````
