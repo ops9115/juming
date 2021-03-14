@@ -396,8 +396,6 @@ WECHAT_WAP：微信wap
 
 POINT_CARD：点卡
 
-E_BANK：网银支付
-
 QQ_WAP：QQ钱包WAP
 
 QQ_QR_CODE：QQ扫码
